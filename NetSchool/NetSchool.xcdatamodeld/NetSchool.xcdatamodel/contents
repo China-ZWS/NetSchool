@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="acc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="datas" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="pwd" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FreeList" representedClassName="FreeList" syncable="YES">
+        <attribute name="datas" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FreeVideo" representedClassName="FreeVideo" syncable="YES">
+        <attribute name="datas" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MyClass" representedClassName="MyClass" syncable="YES">
+        <attribute name="datas" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myVideo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyVideo" inverseName="myClass" inverseEntity="MyVideo" syncable="YES"/>
+    </entity>
+    <entity name="MyVideo" representedClassName="MyVideo" syncable="YES">
+        <attribute name="datas" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="highVideoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="superVideoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myClass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyClass" inverseName="myVideo" inverseEntity="MyClass" syncable="YES"/>
+    </entity>
+    <entity name="PlayRecord" representedClassName="PlayRecord" syncable="YES">
+        <attribute name="datas" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="lastTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seekToTime" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-153" positionY="261" width="128" height="90"/>
+        <element name="FreeList" positionX="16" positionY="108" width="128" height="75"/>
+        <element name="FreeVideo" positionX="45" positionY="243" width="128" height="75"/>
+        <element name="MyClass" positionX="-135" positionY="-90" width="128" height="150"/>
+        <element name="MyVideo" positionX="124" positionY="-126" width="128" height="180"/>
+        <element name="PlayRecord" positionX="-198" positionY="99" width="128" height="120"/>
+    </elements>
+</model>
